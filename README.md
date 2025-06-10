@@ -138,15 +138,30 @@ python dash_app.py
 ```
 
 ## Dash Dashboard
-Run the below command to the terminal.
-  python3.11 -m pip install pandas dash
-Run the following wget command line in the terminal to download dataset as spacex_launch_dash.csv
-  wget "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DS0321EN-SkillsNetwork/datasets/spacex_launch_dash.csv"
-Download a skeleton Dash app to be completed in this lab:
-  wget "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/t4-Vy4iOU19i8y6E3Px_ww/spacex-dash-app.py"
-Test the skeleton app by running the following command in the terminal:
-  python3.11 spacex-dash-app.py
+1. Run the below command to the terminal.
+```bash
+python3.11 -m pip install pandas dash
+```  
+2. Run the following wget command line in the terminal to download dataset as spacex_launch_dash.csv
+```bash
+wget "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DS0321EN-SkillsNetwork/datasets/spacex_launch_dash.csv"
+```
+3. Download a skeleton Dash app to be completed in this lab:
+```bash
+wget "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/t4-Vy4iOU19i8y6E3Px_ww/spacex-dash-app.py"
+```
+4. Test the skeleton app by running the following command in the terminal:
+```bash
+python3.11 spacex-dash-app.py
+```
 ---
+
+### Test Dashboard
+![Test Dashboard](https://github.com/user-attachments/assets/7773f70b-c8c3-4cb1-9703-24415a0105d5)
+
+### Final Dashboard
+![Dash](https://github.com/user-attachments/assets/f97c384e-651a-479d-a237-62b21475d29c)
+
 
 ## 🖼 Final Presentation
 - 📄 [PDF Report](presentation/final_presentation.pdf)
