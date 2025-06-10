@@ -1,149 +1,162 @@
-# 🚀 Capstone Project: Space Launch Records Analysis & Prediction
+# 🚀 Space Launch Records Analysis & Prediction (Capstone Project)
 
-## 🧠 Objective
-This capstone project, part of the IBM Data Science Professional Certificate, aims to analyze space launch data with a focus on identifying key factors that influence launch success. Using interactive visualizations, geospatial mapping, SQL analysis, and predictive modeling, we explore trends in SpaceX launch activity and build a machine learning model to predict future launch outcomes.
-
----
-
-## 📊 Problem Statement
-Space missions are high-cost, high-stakes operations. By analyzing past launch records, this project attempts to:
-- Understand trends across launch sites, payloads, orbits, and booster versions.
-- Visualize success and failure distributions over time and geography.
-- Build a predictive classification model to estimate the probability of a successful launch based on given inputs.
+## 📌 Project Overview
+This project is the final capstone of the IBM Data Science Professional Certificate. It explores **SpaceX launch data** using various data science techniques, including **data wrangling**, **exploratory data analysis**, **SQL queries**, **geospatial mapping**, **interactive dashboards**, and **machine learning** to predict launch success.
 
 ---
 
-## 🧰 Tools & Libraries Used
-- **Languages**: Python, SQL
-- **Libraries**:
-  - `Pandas`, `NumPy`, `Matplotlib`, `Seaborn`
-  - `scikit-learn` for machine learning
-  - `Folium` for interactive maps
-  - `Plotly` and `Dash` for dashboards
-  - `ipython-sql` for SQL in notebooks
-- **Environment**: Jupyter Notebooks, GitHub
+## 🎯 Objective
+- Analyze patterns and trends from past space launch records.
+- Use interactive visualization tools to explore data from multiple perspectives.
+- Build predictive models to forecast the success of a launch based on key factors.
+
+---
+
+## 🧾 Dataset Description
+The dataset is a collection of historical SpaceX launch records, including:
+- **Launch Site**
+- **Payload Mass**
+- **Orbit Type**
+- **Launch Outcome (Success/Failure)**
+- **Booster Version**
+- **Flight Number**
+- **Launch Date**
+- **Landing Pad Info**
+
+Target variable: `class` (1 for success, 0 for failure)
+
+---
+
+## 🛠 Tools & Technologies Used
+- **Python Libraries**: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`
+- **Visualization**: `folium`, `plotly`, `dash`
+- **Database Querying**: `ipython-sql`
+- **Development Tools**: Jupyter Notebook, Git, GitHub
 
 ---
 
 ## 📁 Project Structure
 
 ```
-space-launch-analysis/
-├── data/
-│   └── spacex_launch_data.csv
-├── notebooks/
-│   ├── 1_data_wrangling.ipynb
-│   ├── 2_eda_visualization.ipynb
-│   ├── 3_sql_analysis.ipynb
-│   ├── 4_folium_map.ipynb
-│   ├── 5_plotly_dashboard.ipynb
-│   └── 6_predictive_model.ipynb
-├── app/
-│   └── dash_app.py
-├── presentation/
-│   ├── final_presentation.pdf
-│   └── final_presentation.pptx
-├── requirements.txt
-└── README.md
+space-launch-capstone/
+├── Data/                       # Data files
+├── Notebooks/                 # Jupyter Notebooks for each task
+├── presentation/              # Final presentation PDF & screenshots
+├── app/                       # Dash interactive dashboard
+├── requirements.txt           # Python dependencies
+└── README.md                  # Project summary
 ```
 
 ---
 
-## 🔍 Dataset Description
-**`spacex_launch_data.csv`**  
-- Features include: `Launch Site`, `Payload Mass`, `Orbit`, `Launch Outcome`, `Booster Version`, `Flight Number`, `Date`
-- Target Variable: `Launch Outcome` (Success = 1, Failure = 0)
+## 🔎 Exploratory Data Analysis (EDA) – Insights
+
+### 📌 Key Insights from Visual Analysis
+- **Launch Site CCAFS SLC 40 and KSC LC 39A** had the highest number of launches.
+- **Payload mass** between **2000–6000 kg** had the highest success rate.
+- The **Falcon 9 Booster Version B5** performed most reliably.
+- **Polar orbits** had slightly higher failure rates than LEO or GTO orbits.
+- **Year-on-year success rates** improved significantly after 2014.
+
+### 📊 Sample Visuals:
+- Payload vs Success Scatter Plot
+- Launch Success by Site Bar Chart
+- Booster Version vs Success Rate
+- Orbit Distribution Pie Chart
 
 ---
 
-## 📈 Project Workflow
-
-### 1. 📦 Data Wrangling
-- Cleaned missing values and standardized columns
-- Converted categorical features (Orbit, Launch Site, Booster Version) using `OneHotEncoder`
-- Engineered features such as:
-  - Year from Date
-  - Distance from coast or city (for mapping)
-
-### 2. 🔎 Exploratory Data Analysis (EDA)
-- Plotted trends in launch count and success rate over years
-- Payload mass vs. success rate correlation
-- Orbit type vs. success distribution
-- Launch Site and Booster Version patterns
-
-### 3. 🧮 SQL Analysis
-- Queried success rates by orbit and site using `ipython-sql`
-- Summarized launch counts and average payloads using group-by queries
-- Identified top-performing booster versions
-
-### 4. 🗺️ Interactive Map (Folium)
-- Marked all launch sites on a world map
-- Included success/failure outcomes as colored markers
-- Drew lines from launch sites to closest cities/highways
-
-### 5. 📊 Plotly Dash Dashboard
-- Created interactive filters for:
-  - Launch site
-  - Year
-  - Payload mass
-  - Booster version
-- Displayed dynamic success pie charts and scatter plots
-
-### 6. 🤖 Predictive Modeling (Classification)
-- Models Tested: Logistic Regression, Support Vector Machine (SVM)
-- GridSearchCV used for hyperparameter tuning
-- Metrics: Accuracy, Confusion Matrix
-- Best accuracy achieved: **84%** with Logistic Regression
+## 🧮 SQL Analysis – Highlights
+Using SQL queries embedded in notebooks, we found:
+- Launch Site **KSC LC 39A** had the **highest success rate**.
+- **Booster Version B5** was used most frequently with a **>95% success rate**.
+- Average payload for successful launches was **~4000 kg**.
+- The number of launches **increased every year**, indicating SpaceX's expansion.
 
 ---
 
-## 📊 Sample Visualizations
-### - Payload vs. Launch Success:
-![Payload vs Success](presentation/payload_scatter.png)
+## 🗺️ Geospatial Mapping – Folium Map
 
-### - Launch Site Map:
-![Folium Map](presentation/launch_map.png)
-
-### - Plotly Dashboard Screenshot:
-![Dashboard](presentation/dash_dashboard.png)
-
----
-
-## 📌 How to Run Locally
-
-1. **Clone this repo**:
-   ```bash
-   git clone https://github.com/yourusername/space-launch-analysis.git
-   cd space-launch-analysis
-   ```
-
-2. **Install required libraries**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Launch notebooks**:
-   Open any `.ipynb` from the `notebooks/` folder in JupyterLab or Colab.
-
-4. **Run dashboard app** (optional):
-   ```bash
-   python app/dash_app.py
-   ```
+Interactive map features:
+- Launch sites marked with colored icons:
+  - ✅ Green = Success
+  - ❌ Red = Failure
+- Distance markers to nearest cities, highways, and coastlines
+- Useful for analyzing strategic site placement
 
 ---
 
-## 📄 Final Presentation
-- [📥 Download PDF Slides](presentation/final_presentation.pdf)
-- [📂 View PowerPoint File](presentation/final_presentation.pptx)
+## 📊 Dash Dashboard – Interactive Visuals
+
+An interactive dashboard was created using **Plotly Dash**, with:
+- Launch site filter
+- Payload slider
+- Pie charts for launch success
+- Scatter plots of payload vs outcome
 
 ---
 
-## 🧑‍💻 Author
+## 🤖 Predictive Modeling
+
+### Models Tested:
+- **Logistic Regression**
+- **Support Vector Machine (SVM)**
+
+### Best Model:
+- **Logistic Regression with StandardScaler and GridSearchCV**
+- Accuracy on test data: **84%**
+- Most important features: Payload Mass, Orbit, Booster Version
+
+### Confusion Matrix:
+- True Positive: High
+- False Negatives: Low
+
+---
+
+## 🧑‍💻 How to Run
+
+1. Clone this repo:
+```bash
+git clone https://github.com/yourusername/space-launch-capstone.git
+cd space-launch-capstone
+```
+
+2. Install requirements:
+```bash
+pip install -r requirements.txt
+```
+
+3. Launch Jupyter Notebooks:
+```bash
+jupyter notebook
+```
+
+4. Run the Dash app (optional):
+```bash
+cd app
+python dash_app.py
+```
+
+---
+
+## 🖼 Final Presentation
+- 📄 [PDF Report](presentation/final_presentation.pdf)
+- 📊 Includes visuals, charts, maps, and prediction results
+
+---
+
+## 🧠 Conclusion
+
+The analysis highlights how **payload size**, **booster version**, and **orbit type** are strong indicators of launch success. With interactive maps, dashboards, and a trained classification model, this project provides both **insightful visuals** and **predictive power** for future space missions.
+
+---
+
+## 👩‍🚀 Author
+
 **Manisha Linguntla**  
-IBM Data Science Capstone Project  
-June 2025
+IBM Data Science Capstone | June 2025
 
 ---
 
-## ⚖️ License
-Open for educational and demonstration purposes. Credit to SpaceX and IBM for data and structure.
+## 📜 License
+This project is open-sourced for educational and demonstration purposes. Credit to SpaceX and IBM for data and framework.
