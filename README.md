@@ -164,7 +164,7 @@ python3.11 spacex-dash-app.py
 
 
 ## 🖼 Final Presentation
-- 📄 [PDF Report](presentation/final_presentation.pdf)
+- 📄 [PDF Report]([presentation/final_presentation.pdf](https://github.com/manishalinguntla2808/Applied-Data-Science-Capstone-Project/blob/main/Presentation/SapceX%20Falcon%209%20Capstone%20project.pptx))
 - 📊 Includes visuals, charts, maps, and prediction results
 
 ---
@@ -172,6 +172,11 @@ python3.11 spacex-dash-app.py
 ## 🧠 Conclusion
 
 The analysis highlights how **payload size**, **booster version**, and **orbit type** are strong indicators of launch success. With interactive maps, dashboards, and a trained classification model, this project provides both **insightful visuals** and **predictive power** for future space missions.
+Launch Success Increases Over Time: Success rates improve with increasing flight number, reflecting operational learning and technological advancements.
+Launch Site Performance: KSC LC-39A has the highest number of successful launches, while CCAFS SLC-40 handles most high-payload missions with strong success rates.
+Payload Mass Impact: Higher payloads generally lead to higher success, especially within the optimal payload range of 2,000 kg to 8,000 kg; VLEO (~15,600 kg), ISS (~12,000 kg), and PO (~10,000 kg) consistently handle heavier payloads successfully.
+Orbit-Specific Trends: Orbits such as VLEO, ISS, GTO, and PO demonstrate higher launch success rates across varying payload capacities.
+Model Performance: Logistic Regression, SVM, and KNN models delivered the highest prediction accuracy (83.3%), effectively identifying factors contributing to successful launches.
 
 ---
 
