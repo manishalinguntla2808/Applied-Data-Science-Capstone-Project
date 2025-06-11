@@ -164,7 +164,7 @@ python3.11 spacex-dash-app.py
 
 
 ## 🖼 Final Presentation
-- 📄 https://github.com/manishalinguntla2808/Applied-Data-Science-Capstone-Project/blob/main/Presentation/SapceX%20Falcon%209%20Capstone%20project.pptx
+- 📄 ![Final PDF](https://github.com/manishalinguntla2808/Applied-Data-Science-Capstone-Project/blob/main/Presentation/SapceX%20Falcon%209%20Capstone%20project.pptx)
 - 📊 Includes visuals, charts, maps, and prediction results
 
 ---
